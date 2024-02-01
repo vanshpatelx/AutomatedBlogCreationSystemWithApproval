@@ -1,4 +1,4 @@
-# Project Readme: Automated Blog Creation System 🤖
+# Project Readme: Blog Creation System 🤖
 
 ## Overview
 This project aims to create an automated blog creation system using the Gemini Pro language model and various agents orchestrated by CrewAI. The system includes a Telegram bot for user interaction, a multi-agent setup for blog creation, integration with Notion for storing drafts, and a notification system for approval and publishing.
