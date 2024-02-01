@@ -1,0 +1,9 @@
+langchain-community 
+langchain 
+crewai 
+langchain-openai 
+duckduckgo-search
+langchain-core
+langchain-google-vertexai
+langchain_google_genai
+streamlit
