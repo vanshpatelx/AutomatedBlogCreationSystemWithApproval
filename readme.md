@@ -3,21 +3,36 @@
 ## Overview
 This project aims to create an automated blog creation system using the Gemini Pro language model and various agents orchestrated by CrewAI. The system includes a Telegram bot for user interaction, a multi-agent setup for blog creation, integration with Notion for storing drafts, and a notification system for approval and publishing.
 
+## How Works ?
+- **User Interaction:** Users initiate the blog creation process by interacting with a Telegram bot and providing a blog name.
+- **Agent Orchestration:** CrewAI orchestrates three agents for specific roles: Content Generator, Notion Publisher, and Notifier.
+- **Agent Roles:**
+   - **Content Generator:** Utilizes the Gemini Pro language model to create engaging blog content based on the provided blog name with four agents.
+       - Senior Researcher
+       - Insight Researcher
+       - Tech Content Strategist
+       - Markdown Formatter
+   -  **Notion Publication:** The Notion Publisher Agent adds the generated content to a designated Notion workspace for draft storage.
+  - **Notification for Approval:** The Notifier Agent sends a notification to the user, containing a preview link to the blog draft in Notion, indicating that the blog is ready for review.
+  - **User Review and Approval:** Users receive the notification and review the blog draft in Notion.
+     - Users approve the draft through the Telegram bot interface.
+  - **Automated Publishing (Optional):** An optional step can be added to automate the publishing of approved content.
+
 ## Requirements
 - CrewAI library
 - LangChain community tools
 - LangChain Google Generative AI (Gemini Pro)
 - Streamlit
-- Python-dotenv
 - python-telegram-bot
 - Notion SDK (notion-sdk-python)
+- postgreSQL
 
 ## Installation
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/your-repo.git
-    cd your-repo
+    git clone https://github.com/vanshpatelx/AutomatedBlogCreationSystemWithApproval
+    cd AutomatedBlogCreationSystemWithApproval
     ```
 
 2. Install the required dependencies:
@@ -33,38 +48,3 @@ This project aims to create an automated blog creation system using the Gemini P
     NOTION_API_TOKEN=your_notion_api_token_here
     GOOGLE_API_KEY=your_google_api_key_here
     ```
-
-## Usage
-
-### 1. Telegram Bot Setup
-- Create a Telegram bot using the BotFather on Telegram. Obtain the API token and set it in the `.env` file.
-
-### 2. Agent Configuration
-- Configure agents for blog creation, including roles such as "Content Generator," "Notion Publisher," and "Notifier."
-
-### 3. Task Definition
-- Define tasks for each agent, including creating blog content, adding it to Notion, and sending notifications for approval.
-
-### 4. Crew Formation
-- Create a crew named `blog_crew` consisting of the configured agents and tasks. Set the crew to execute tasks sequentially.
-
-### 5. Main Function
-- Implement the main function to set up the Telegram bot interface and handle user inputs. When the user provides the blog name via the Telegram bot, trigger the execution of the defined crew tasks.
-
-### 6. Running the Script
-- Execute the script by running the following command:
-
-    ```bash
-    python your_script_name.py
-    ```
-
-- Interact with the Telegram bot by providing the blog name to initiate the automated blog creation process.
-
-## Additional Notes
-- Ensure secure storage of API keys in the `.env` file.
-- Customize agent roles, goals, and backstories based on your project requirements.
-- Integrate with Notion using the Notion SDK for adding and managing blog drafts.
-- Utilize the notification system for approval and preview links.
-
-Feel free to extend the functionality, experiment with different language models, and adapt the system to your specific use case for seamless and automated blog creation!# AutomatedBlogCreationSystemWithApproval
-# AutomatedBlogCreationSystemWithApproval
