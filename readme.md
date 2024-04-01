@@ -1,7 +1,7 @@
 # Project : Automated Blog Creation System 🤖
 
 ## Overview
-This project aims to create an automated blog creation system using the Gemini Pro language model and various agents orchestrated by CrewAI. The system includes a Telegram bot for user interaction, a multi-agent setup for blog creation, integration with Notion for storing drafts, and a notification system for approval and publishing.
+This project aims to create an automated blog creation system using the Gemini Pro language model and various agents orchestrated by AutoGen. The system includes a Telegram bot for user interaction, a multi-agent setup for blog creation, integration with Notion for storing drafts, and a notification system for approval and publishing.
 
 ## Architecture
 ![System Architecture](https://github.com/vanshpatelx/AutomatedBlogCreationSystemWithApproval/blob/main/img/img.png)
@@ -9,7 +9,7 @@ This project aims to create an automated blog creation system using the Gemini P
 
 ## How Works ?
 - **User Interaction:** Users initiate the blog creation process by interacting with a Telegram bot and providing a blog name.
-- **Agent Orchestration:** CrewAI orchestrates three agents for specific roles: Content Generator, Notion Publisher, and Notifier.
+- **Agent Orchestration:** AutoGen orchestrates three agents for specific roles: Content Generator, Notion Publisher, and Notifier.
 - **Agent Roles:**
    - **Content Generator:** Utilizes the Gemini Pro language model to create engaging blog content based on the provided blog name with four agents.
        - Senior Researcher
@@ -23,7 +23,7 @@ This project aims to create an automated blog creation system using the Gemini P
   - **Automated Publishing (Optional):** An optional step can be added to automate the publishing of approved content.
 
 ## Requirements
-- CrewAI library
+- AutoGen library
 - LangChain community tools
 - LangChain Google Generative AI (Gemini Pro)
 - Streamlit
